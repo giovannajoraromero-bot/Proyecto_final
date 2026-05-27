@@ -5,11 +5,11 @@ print("2-.Registrarse")
 print("3-.Salir")
 opcion=input("Hola bienvenido a la Floristería Aurora Floral, por favor elija una opción: ")
 while True:
-    if opcion=="2":
+    if opcion=="1":
         user=input("Por favor ingrese su nombre de ususario: ")
         c=input("Ingrese su contraseña: ")
         print("Bienvenid@ al sistema")
-    elif opcion=="1":
+    elif opcion=="2":
         nombre=input("Cree el nombre de usuario: ").strip()
         contraseña=input("Ingrese la contraseña: ").strip()
         intentos=0
