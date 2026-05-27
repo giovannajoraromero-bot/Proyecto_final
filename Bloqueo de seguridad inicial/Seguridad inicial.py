@@ -27,6 +27,7 @@ while True:
                 print("Contraseña o usuario incorrecto, intentelo de nuevo")
             if intentos==intentos_máximo:
                 print("Acceso bloqueado.Superó el límite de intentos")
+                exit()
     elif opcion=="3":
         print("Saliendo del sistema")
         break
