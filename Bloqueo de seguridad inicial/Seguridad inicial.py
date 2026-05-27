@@ -12,7 +12,7 @@ while True:
         break
     elif opcion=="2":
         nombre=input("Cree el nombre de usuario: ").strip()
-        contraseña=input("Ingrese la contraseña: ").strip()
+        contraseña=input("Cree la contraseña: ").strip()
         intentos=0
         intentos_máximo=3
         while intentos<intentos_máximo:
