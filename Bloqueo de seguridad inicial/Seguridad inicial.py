@@ -1,17 +1,33 @@
 #Proyecto Sistema de ventas de Floristería
 #Bloqueo de seguridad inicial
-print("Floristeria Aurora Floral")
-contraseña=input("Cree una contraseña para ingresar al sistema: ").strip()
-intentos=0
-intentos_máximo=3
-while intentos<intentos_máximo:
-    clave=input("Ingrese la contraseña: ").strip()
-    if clave==contraseña:
-        print("Acceso concedido")
-        print("Bienvenid@ al sistema de ventas de la floristería 'Aurora Floral'")
+print("1-.Iniciar sesion")
+print("2-.Registrarse")
+print("3-.Salir")
+opcion=input("Hola bienvenido a la Floristería Aurora Floral, por favor elija una opción: ")
+while True:
+    if opcion=="2":
+        user=input("Por favor ingrese su nombre de ususario: ")
+        c=input("Ingrese su contraseña: ")
+        print("Bienvenid@ al sistema")
+    elif opcion=="1":
+        nombre=input("Cree el nombre de usuario: ").strip()
+        contraseña=input("Ingrese la contraseña: ").strip()
+        intentos=0
+        intentos_máximo=3
+        while intentos<intentos_máximo:
+            usuario=input("Ingrese el nombre de usuario: ").strip()
+            clave=input("Ingrese la contraseña: ").strip()
+            if clave==contraseña and usuario==nombre:
+                print("Acceso concedido")
+                print("Bienvenid@ al sistema de ventas de la floristería 'Aurora Floral'")
+                exit()
+            else:
+                intentos +=1
+                print("Contraseña o usuario incorrecto, intentelo de nuevo")
+            if intentos==intentos_máximo:
+                print("Acceso bloqueado.Superó el límite de intentos")
+    elif opcion=="3":
+        print("Saliendo del sistema")
         break
     else:
-        intentos +=1
-        print("Contraseña incorrecta, intentelo de nuevo")
-if intentos==intentos_máximo:
-    print("Acceso bloqueado.Superó el límite de intentos")
+        print("Opción inválida")
