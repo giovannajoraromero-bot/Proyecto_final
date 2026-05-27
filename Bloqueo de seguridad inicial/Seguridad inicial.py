@@ -9,6 +9,7 @@ while True:
         user=input("Por favor ingrese su nombre de ususario: ")
         c=input("Ingrese su contraseña: ")
         print("Bienvenid@ al sistema")
+        break
     elif opcion=="2":
         nombre=input("Cree el nombre de usuario: ").strip()
         contraseña=input("Ingrese la contraseña: ").strip()
