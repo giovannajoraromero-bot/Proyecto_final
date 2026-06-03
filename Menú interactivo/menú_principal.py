@@ -1,7 +1,7 @@
 nombre = ""
 contraseña = ""
 while True:
-    print("\n1-. Iniciar sesión")
+    print("1-. Iniciar sesión")
     print("2-. Registrarse")
     print("3-. Salir")
     opcion = input("Hola bienvenido a la Floristería Aurora Floral, por favor elija una opción: ").strip()
@@ -50,7 +50,7 @@ while True:
                       print("2. Registrar venta")
                       print("3. Actualizar inventario")
                       print("4. salir")
-                      o=input("Por favorseleccione una opción: ").strip().lower()
+                      o=input("Por favor seleccione una opción: ").strip().lower()
                       if o=="1":
                           print("-Rosas")
                           print("-Tulipanes")
@@ -76,9 +76,8 @@ while True:
                           if flor in inventario:
                               if tamaño in inventario[flor]["precios"]:
                                total = inventario[flor]["precios"][tamaño] * cantidad
-                              total = inventario[flor]["precios"][tamaño] * cantidad
                               inventario[flor]["stock"] = (inventario[flor]["stock"] - cantidad)
-                              print("\nVenta registrada")
+                              print("Venta registrada")
                               print("Flor:", flor)
                               print("Tamaño:", tamaño)
                               print("Cantidad:", cantidad)
@@ -88,7 +87,7 @@ while True:
                           else:
                            print("Flor no encontrada")
                       elif o == "3":
-                          flor = input("Flor a actualizar: ").strip().lower()
+                          flor = input("Actualizar la flor: ").strip().lower()
                           flor = flor.replace(" ", "")
                           if flor in inventario:
                               cantidad = int(input("Cantidad a agregar: "))
