@@ -61,8 +61,8 @@ while True:
                           flor=input("Por favor elija el tipo de flor: ").strip().lower()
                           if flor in inventario :
                               print("Flor:",flor)
-                              print("Precios de cada ramo:")
                               print("Stock:", inventario[flor]['stock'])
+                              print("Precios de cada ramo:")
                               print("Pequeño:", inventario[flor]['precios']['pequeño'],"bs")
                               print("Mediano:", inventario[flor]['precios']['mediano'],"bs")
                               print("Normal:", inventario[flor]['precios']['normal'],"bs")
@@ -72,21 +72,22 @@ while True:
                       elif o == "2":
                           flor = input("Tipo de flor: ").strip().lower()
                           tamaño = input("Tamaño del ramo: ").strip().lower()
-                          cantidad = int(input("Cantidad de ramos: "))
+                          cantidad = int(input("Cantidad de ramos(Ingrese en números): "))
                           if flor in inventario:
                               if tamaño in inventario[flor]["precios"]:
                                total = inventario[flor]["precios"][tamaño] * cantidad
-                              inventario[flor]["stock"] = (inventario[flor]["stock"] - cantidad)
-                              print("Venta registrada")
-                              print("Flor:", flor)
-                              print("Tamaño:", tamaño)
-                              print("Cantidad:", cantidad)
-                              print("Total:", total, "Bs")
-                              print("Stock restante:",inventario[flor]["stock"])
-                              exit()
+                               inventario[flor]["stock"] = (inventario[flor]["stock"] - cantidad)
+                               print("Venta registrada")
+                               print("Flor:", flor)
+                               print("Tamaño:", tamaño)
+                               print("Cantidad:", cantidad)
+                               print("Total:", total, "Bs")
+                               print("Stock restante:",inventario[flor]["stock"])
+                               exit()
                           else:
-                           print("Flor no encontrada")
+                           print("Los datos ingresados son incorrectos o no estan en el sistema")
                       elif o == "3":
+                          print("Actualizar el stock de la flor")
                           flor = input("Actualizar la flor: ").strip().lower()
                           flor = flor.replace(" ", "")
                           if flor in inventario:
